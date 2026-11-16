@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barro Vivo Cerâmica | Cerâmica artesanal para o seu dia a dia</title>
+  <meta name="description" content="Loja online de cerâmica artesanal: vasos, canecas, tigelas, potes e cachepôs feitos à mão.">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ilustrações das peças (sprite SVG reutilizado na vitrine, no hero e no carrinho) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="p-vase">
+        <ellipse cx="100" cy="182" rx="50" ry="6" fill="#000" fill-opacity=".12"/>
+        <path d="M85 28H115V50C115 66 148 84 148 124C148 160 128 178 100 178C72 178 52 160 52 124C52 84 85 66 85 50Z" style="fill:var(--c1)"/>
+        <path d="M54 116Q100 134 146 116" fill="none" style="stroke:var(--c2)" stroke-width="9"/>
+        <path d="M52 134Q100 152 148 134" fill="none" style="stroke:var(--c2)" stroke-width="4"/>
+        <ellipse cx="100" cy="28" rx="15" ry="4" style="fill:var(--c2)"/>
+        <path d="M66 104C66 94 73 86 80 80" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g id="p-mug">
+        <ellipse cx="98" cy="160" rx="52" ry="6" fill="#000" fill-opacity=".12"/>
+        <path d="M138 80C172 78 172 132 138 130" fill="none" style="stroke:var(--c1)" stroke-width="11" stroke-linecap="round"/>
+        <path d="M58 66H138V140C138 152 128 158 118 158H78C68 158 58 152 58 140Z" style="fill:var(--c1)"/>
+        <ellipse cx="98" cy="66" rx="40" ry="8" style="fill:var(--c2)"/>
+        <path d="M58 108H138" fill="none" style="stroke:var(--c2)" stroke-width="8"/>
+        <path d="M70 82V128" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g id="p-bowl">
+        <ellipse cx="100" cy="172" rx="52" ry="6" fill="#000" fill-opacity=".12"/>
+        <rect x="78" y="154" width="44" height="16" rx="4" style="fill:var(--c2)"/>
+        <path d="M28 78H172C172 132 142 160 100 160C58 160 28 132 28 78Z" style="fill:var(--c1)"/>
+        <ellipse cx="100" cy="78" rx="72" ry="11" style="fill:var(--c2)"/>
+        <ellipse cx="100" cy="80" rx="62" ry="8" fill="#fff" fill-opacity=".18"/>
+        <path d="M46 98C50 114 60 126 72 134" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g id="p-plate">
+        <ellipse cx="100" cy="146" rx="86" ry="14" fill="#000" fill-opacity=".12"/>
+        <ellipse cx="100" cy="126" rx="86" ry="28" style="fill:var(--c2)"/>
+        <ellipse cx="100" cy="120" rx="86" ry="28" style="fill:var(--c1)"/>
+        <ellipse cx="100" cy="122" rx="60" ry="17" style="fill:var(--c2)"/>
+        <ellipse cx="100" cy="120" rx="60" ry="16" fill="#fff" fill-opacity=".22"/>
+      </g>
+      <g id="p-jar">
+        <ellipse cx="100" cy="174" rx="50" ry="6" fill="#000" fill-opacity=".12"/>
+        <path d="M58 80H142V150C142 166 126 172 100 172C74 172 58 166 58 150Z" style="fill:var(--c1)"/>
+        <path d="M58 118H142" fill="none" style="stroke:var(--c2)" stroke-width="8"/>
+        <rect x="52" y="64" width="96" height="18" rx="7" style="fill:var(--c2)"/>
+        <circle cx="100" cy="56" r="9" style="fill:var(--c2)"/>
+        <path d="M70 96V146" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g id="p-planter">
+        <ellipse cx="100" cy="176" rx="50" ry="6" fill="#000" fill-opacity=".12"/>
+        <ellipse cx="100" cy="58" rx="9" ry="34" fill="#6F8F5B"/>
+        <ellipse cx="100" cy="58" rx="9" ry="34" fill="#587A47" transform="rotate(-38 100 96)"/>
+        <ellipse cx="100" cy="58" rx="9" ry="34" fill="#587A47" transform="rotate(38 100 96)"/>
+        <ellipse cx="100" cy="58" rx="8" ry="30" fill="#7FA06A" transform="rotate(-68 100 96)"/>
+        <ellipse cx="100" cy="58" rx="8" ry="30" fill="#7FA06A" transform="rotate(68 100 96)"/>
+        <path d="M52 108H148L136 172H64Z" style="fill:var(--c1)"/>
+        <rect x="46" y="96" width="108" height="18" rx="5" style="fill:var(--c2)"/>
+        <path d="M62 124L68 160" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="5" stroke-linecap="round"/>
+      </g>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Barro Vivo Cerâmica, ir para o início">
+        <svg class="logo-mark" viewBox="0 0 200 200" aria-hidden="true" style="--c1:#C4623A;--c2:#8E3F22">
+          <use href="#p-vase"/>
+        </svg>
+        <span class="logo-text">Barro Vivo<small>cerâmica artesanal</small></span>
+      </a>
+
+      <nav class="nav" id="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#historia">Nossa história</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartOpen" type="button" aria-label="Abrir carrinho, 0 itens" aria-controls="cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-label">Carrinho</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Feito à mão, queimado com cuidado</p>
+          <h1 id="hero-titulo">Cerâmica artesanal para o seu <em>dia a dia</em></h1>
+          <p class="lead">Vasos, canecas, tigelas e potes com esmaltes autorais. Cada peça é modelada à mão e leva um pouco de terra para a sua casa.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#colecao">Ver coleção</a>
+            <a class="btn btn-ghost" href="#historia">Nossa história</a>
+          </div>
+          <ul class="hero-points">
+            <li>Frete grátis acima de R$ 300</li>
+            <li>3x sem juros</li>
+          </ul>
+        </div>
+
+        <div class="hero-art">
+          <svg viewBox="0 0 480 440" role="img" aria-label="Ilustração de um vaso, uma caneca e uma tigela de cerâmica sobre uma prateleira">
+            <path d="M40 440V200C40 90 130 20 240 20C350 20 440 90 440 200V440Z" fill="#E9C9AC"/>
+            <path d="M80 440V210C80 120 150 64 240 64C330 64 400 120 400 210V440Z" fill="#F2DCC4"/>
+            <circle cx="366" cy="104" r="26" fill="#C4623A" opacity=".9"/>
+            <rect x="40" y="388" width="400" height="52" fill="#D7B28D"/>
+            <rect x="40" y="388" width="400" height="5" fill="#C29C75"/>
+            <g class="float f1"><use href="#p-vase" transform="translate(70 120) scale(1.5)" style="--c1:#C4623A;--c2:#8E3F22"/></g>
+            <g class="float f2"><use href="#p-mug" transform="translate(250 235) scale(.95)" style="--c1:#F1E4CF;--c2:#C4623A"/></g>
+            <g class="float f3"><use href="#p-bowl" transform="translate(38 263) scale(.75)" style="--c1:#7A8B6F;--c2:#5C6B52"/></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DIFERENCIAIS ================= -->
+    <section class="benefits" aria-label="Diferenciais da loja">
+      <div class="container">
+        <ul class="benefits-list">
+          <li class="reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.6 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg>
+            <div><strong>Feito à mão</strong><span>Peças únicas, uma por vez</span></div>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>
+            <div><strong>Envio para todo o Brasil</strong><span>Embalagem reforçada</span></div>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div><strong>Compra segura</strong><span>Seus dados protegidos</span></div>
+          </li>
+          <li class="reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.5-5.8"/><path d="M20 4v4h-4"/></svg>
+            <div><strong>Troca em 7 dias</strong><span>Sem complicação</span></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= COLEÇÃO ================= -->
+    <section class="section" id="colecao" aria-labelledby="colecao-titulo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Coleção</p>
+          <h2 id="colecao-titulo">Escolha por categoria</h2>
+          <p class="section-sub">Filtre a vitrine e adicione ao carrinho com um toque.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar produtos por categoria" id="filters">
+          <button type="button" class="chip" data-filter="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="chip" data-filter="vasos" aria-pressed="false">Vasos</button>
+          <button type="button" class="chip" data-filter="canecas" aria-pressed="false">Canecas</button>
+          <button type="button" class="chip" data-filter="mesa" aria-pressed="false">Mesa posta</button>
+          <button type="button" class="chip" data-filter="cozinha" aria-pressed="false">Cozinha</button>
+          <button type="button" class="chip" data-filter="plantas" aria-pressed="false">Plantas</button>
+        </div>
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+
+        <div class="grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= NOSSA HISTÓRIA ================= -->
+    <section class="section about" id="historia" aria-labelledby="historia-titulo">
+      <div class="container about-inner">
+        <div class="about-art reveal">
+          <svg viewBox="0 0 400 320" role="img" aria-label="Ilustração de um pote, um cachepô e um prato de cerâmica">
+            <rect width="400" height="320" rx="28" fill="#EBD9C2"/>
+            <circle cx="320" cy="70" r="40" fill="#F4E8D8"/>
+            <rect x="0" y="262" width="400" height="58" fill="#D7B28D"/>
+            <use href="#p-planter" transform="translate(20 80) scale(1.15)" style="--c1:#D9895F;--c2:#B0643E"/>
+            <use href="#p-jar" transform="translate(150 60) scale(1.3)" style="--c1:#D8B26E;--c2:#B38B45"/>
+            <use href="#p-plate" transform="translate(255 150) scale(.7)" style="--c1:#F4EDE2;--c2:#D9C7AA"/>
+          </svg>
+        </div>
+
+        <div class="about-text reveal">
+          <p class="eyebrow">Nossa história</p>
+          <h2 id="historia-titulo">Do barro à sua mesa</h2>
+          <p>A Barro Vivo nasceu num pequeno ateliê, com a ideia de que objetos simples podem tornar os dias mais bonitos. Modelamos, esmaltamos e queimamos cada peça com calma, por isso nenhuma é exatamente igual à outra.</p>
+          <p>Usamos argilas selecionadas e esmaltes sem chumbo, seguros para o uso com alimentos. As pequenas variações de cor e forma fazem parte da peça.</p>
+          <ul class="stats">
+            <li><strong>100%</strong><span>modelado à mão</span></li>
+            <li><strong>+40</strong><span>esmaltes autorais</span></li>
+            <li><strong>1.200 °C</strong><span>queima em alta temperatura</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEPOIMENTOS (SLIDER) ================= -->
+    <section class="section testimonials" id="depoimentos" aria-labelledby="dep-titulo">
+      <div class="container">
+        <header class="section-head center reveal">
+          <p class="eyebrow">Depoimentos</p>
+          <h2 id="dep-titulo">Quem já levou para casa</h2>
+        </header>
+
+        <div class="slider reveal" id="slider" aria-roledescription="carrossel" aria-label="Depoimentos de clientes" tabindex="0">
+          <div class="slides">
+            <figure class="slide">
+              <p class="stars" role="img" aria-label="5 de 5 estrelas">★★★★★</p>
+              <blockquote>As canecas são lindas e mantêm o café quente por mais tempo. Chegou tudo muito bem embalado.</blockquote>
+              <figcaption><strong>Marina S.</strong> · Salvador, BA</figcaption>
+            </figure>
+            <figure class="slide">
+              <p class="stars" role="img" aria-label="5 de 5 estrelas">★★★★★</p>
+              <blockquote>Comprei o vaso Oliva para a sala e virou o centro das atenções. O acabamento é impecável.</blockquote>
+              <figcaption><strong>Rafael C.</strong> · Recife, PE</figcaption>
+            </figure>
+            <figure class="slide">
+              <p class="stars" role="img" aria-label="5 de 5 estrelas">★★★★★</p>
+              <blockquote>Atendimento atencioso e peças únicas. Já indiquei a loja para toda a minha família.</blockquote>
+              <figcaption><strong>Joana P.</strong> · São Paulo, SP</figcaption>
+            </figure>
+          </div>
+          <div class="slider-controls">
+            <button type="button" class="round-btn" id="prevSlide" aria-label="Depoimento anterior">‹</button>
+            <div class="dots" id="dots"></div>
+            <button type="button" class="round-btn" id="nextSlide" aria-label="Próximo depoimento">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section class="section contact" id="contato" aria-labelledby="contato-titulo">
+      <div class="container contact-inner">
+        <div class="contact-text reveal">
+          <p class="eyebrow">Contato</p>
+          <h2 id="contato-titulo">Fale com a gente</h2>
+          <p>Dúvidas sobre uma peça, encomenda personalizada ou presente? Escreva e respondemos em até 1 dia útil.</p>
+          <ul class="contact-info">
+            <li><strong>E-mail</strong> ola@barrovivo.exemplo</li>
+            <li><strong>Atendimento</strong> Seg a sex, das 9h às 17h</li>
+            <li><strong>Ateliê</strong> Salvador, Bahia</li>
+          </ul>
+        </div>
+
+        <form class="form-card reveal" id="contactForm" novalidate aria-label="Formulário de contato">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?" aria-describedby="nome-erro" required>
+            <p class="error" id="nome-erro" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" aria-describedby="email-erro" required>
+            <p class="error" id="email-erro" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" name="assunto" aria-describedby="assunto-erro" required>
+              <option value="">Selecione…</option>
+              <option value="duvida">Dúvida sobre um produto</option>
+              <option value="pedido">Acompanhar um pedido</option>
+              <option value="encomenda">Encomenda personalizada</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+            <p class="error" id="assunto-erro" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" maxlength="500" placeholder="Conte como podemos ajudar" aria-describedby="mensagem-erro mensagem-contador" required></textarea>
+            <div class="field-foot">
+              <p class="error" id="mensagem-erro" aria-live="polite"></p>
+              <p class="counter" id="mensagem-contador">0/500</p>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit" id="submitBtn">Enviar mensagem</button>
+          <p class="form-success" id="formSuccess" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Barro Vivo</p>
+        <p class="footer-text">Cerâmica artesanal feita com calma, para durar e embelezar o dia a dia.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <h2 class="footer-title">Loja</h2>
+        <ul>
+          <li><a href="#colecao">Coleção</a></li>
+          <li><a href="#historia">Nossa história</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Ajuda">
+        <h2 class="footer-title">Ajuda</h2>
+        <ul>
+          <li><a href="#contato">Fale conosco</a></li>
+          <li><a href="#contato">Trocas e devoluções</a></li>
+          <li><a href="#contato">Encomendas</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-title">Contato</h2>
+        <address>
+          ola@barrovivo.exemplo<br>
+          Salvador, Bahia
+        </address>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Barro Vivo Cerâmica. Protótipo desenvolvido para a disciplina BES048 – Programação Front End. Produtos, preços e depoimentos são fictícios.</p>
+    </div>
+  </footer>
+
+  <!-- ================= CARRINHO (DRAWER) ================= -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Seu carrinho</h2>
+      <button type="button" class="round-btn" id="cartClose" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div class="shipping" id="shipping">
+      <p id="shippingText"></p>
+      <div class="bar"><span id="shippingBar"></span></div>
+    </div>
+
+    <p class="cart-empty" id="cartEmpty">Seu carrinho está vazio. Que tal escolher uma peça?</p>
+    <ul class="cart-items" id="cartItems"></ul>
+
+    <div class="cart-foot">
+      <div class="cart-total"><span>Subtotal</span><strong id="cartTotal">R$ 0,00</strong></div>
+      <button type="button" class="btn btn-primary btn-block" id="checkoutBtn">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
